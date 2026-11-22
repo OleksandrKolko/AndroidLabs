@@ -25,3 +25,5 @@ dependencyResolutionManagement {
 rootProject.name = "AndroidLabs"
 include(":lab3:task1")
 include(":lab3:task2")
+include(":lab4:task1")
+include(":lab4:task2")

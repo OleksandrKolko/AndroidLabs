@@ -1,0 +1,13 @@
+package com.example.lab4.task2
+
+import android.app.Application
+import timber.log.Timber
+
+class MyApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
+    }
+}
