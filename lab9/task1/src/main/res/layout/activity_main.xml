@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Блок 1: кооперативне скасування -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Блок 1. Кооперативне скасування"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Прогрес: 0%"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnStartNoCoop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Start (без кооперації)" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start (з ensureActive)" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+
+        <!-- Блоки 2-3: ієрархія Job -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Блоки 2–3. Помилка в дочірній корутині"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnTestCrash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Test Crash (звичайний Job) — ПАДАЄ" />
+
+        <Button
+            android:id="@+id/btnSupervisor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="supervisorScope + try-catch" />
+
+        <!-- Блок 4 та ⭐ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Блок 4. CoroutineExceptionHandler"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnGlobalCrash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Global Crash (safeScope + ceh)" />
+
+        <Button
+            android:id="@+id/btnNestedCrash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⭐ ceh у дочірній корутині — ПАДАЄ" />
+
+    </LinearLayout>
+</ScrollView>
